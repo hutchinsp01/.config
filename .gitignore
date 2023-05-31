@@ -1,0 +1,11 @@
+# Ignore everything
+/*
+/*/
+
+# Except ...
+!.gitignore
+!kitty/
+!skhd/
+!yabai/
+!zsh/
+zsh/.zcompdump*
