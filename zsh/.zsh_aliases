@@ -1,0 +1,44 @@
+# General Aliases
+alias zshconfig="nvim ~/.config/zsh/.zshrc"
+alias zshaliases="nvim ~/.config/zsh/.zsh_aliases"
+alias yabaiconfig="nvim ~/.config/yabai/yabairc"
+alias yabairestart="brew services restart yabai"
+alias skhdconfig="nvim ~/.config/skhd/skhdrc"
+alias skhdrestart="brew services restart skhd"
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
+alias spt-start="brew services restart spotifyd && spt"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias myip="curl https://ipecho.net/plain; echo"
+alias ls="ls --color -l -h -a"
+alias scratch="code $PROJECT_HOME/scratch.py"
+alias runscratch="python $PROJECT_HOME/scratch.py"
+
+# Git Aliases
+alias gwip="git commit -m 'fix: wip' -n"
+
+# Uptick Aliases
+alias ps="poetry shell"
+alias pw="pnpm watch"
+alias yyw="yarn && yarn watch"
+alias yw="yarn watch"
+alias dev="git checkout develop"
+alias wf="cd ~/projects/Uptick/workforce/ && poetry shell"
+alias subman="cd ~/projects/Uptick/subscription-manager/"
+alias chepong="cd ~/projects/Uptick/chepong"
+alias cluster="cd ~/projects/Uptick/uptick-cluster/"
+alias clusterpull="cd ~/projects/Uptick/uptick-cluster/ && git pull"
+
+# University Aliases
+alias rocketpy="cd ~/projects/University/rocketpy-sims/"
+alias rs="cd ~/projects/University/recipestore"
+alias astra="cd ~/projects/University/astra"
+
+# Other Aliases
+alias aoc="cd $PROJECT_HOME/advent-of-code"
+
+# Cleaning Aliases
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+# Meme Aliases
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias {pog,poggers}='echo "⣿⣿⣿⣿⡿⠟⠛⠛⠛⠛⠉⠉⠙⠛⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠟\n⣿⣿⣯⣥⣤⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⣿⣿⣿⣏⣀⣀⣀⡀\n⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠻⠿⠟⠉⠉⠉⢻⣿⣿⣿⡿⠟⠋⣡⣼⣿⣿⣿⡄\n⣿⣿⣿⣟⣭⣤⣶⣶⣿⣿⠃⠀⠀⢀⣀⣤⣶⣿⣿⣿⣿⡅⡀⢀⣩⣤⣤\n⣿⣿⣿⣿⣿⣿⣛⡛⠛⠛⠛⢋⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⠛⠛⠓⠠\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣤⣤⣤⣦\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠿⢿⡿⢿⣿⣿⣿⠃\n⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⣄⣀⣀⠀⠀⠀⠀⠀⢰⣾⣿⣿⠏\n⠀⠀⠀⠀⠀⠀⠉⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣜⡻⠋\n⣰⣾⣷⣶⣿⣾⣖⣻⣿⣿⡿⣿⣿⣿⣿⠿⠿⠟⠛⠛⠛⠋⠉⠉⢉⡽⠃\n⣿⣿⣿⣿⣿⣿⡉⠉⠉⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⡤⠚⠉\n⠛⠛⣿⣿⣿⣿⣿⣿⣿⠉⠛⢶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⡇\n⠠⣾⣿⣿⣿⣿⣿⠿⠟⠃⠀⠀⠀⠈⠲⣴⣦⣤⣤⣤⣶⡾⠁\n⠄⠈⠉⠻⢿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠉"'
