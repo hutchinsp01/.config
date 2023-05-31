@@ -8,4 +8,5 @@
 !skhd/
 !yabai/
 !zsh/
+zsh/.zsh_history
 zsh/.zcompdump*
