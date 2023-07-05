@@ -11,10 +11,11 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias myip="curl https://ipecho.net/plain; echo"
 alias ls="ls --color -l -h -a"
 alias scratch="code $PROJECT_HOME/scratch.py"
-alias runscratch="python $PROJECT_HOME/scratch.py"
+alias runscratch="python3 $PROJECT_HOME/scratch.py"
+alias chrome="open -a 'Google Chrome'"
 
-# Git Aliases
-alias gwip="git commit -m 'fix: wip' -n"
+# Kube Aliases
+alias kgp="kubectl get pods"
 
 # Uptick Aliases
 alias ps="poetry shell"
@@ -25,8 +26,9 @@ alias dev="git checkout develop"
 alias wf="cd ~/projects/Uptick/workforce/ && poetry shell"
 alias subman="cd ~/projects/Uptick/subscription-manager/"
 alias chepong="cd ~/projects/Uptick/chepong"
-alias cluster="cd ~/projects/Uptick/uptick-cluster/"
+alias cluster="cd ~/projects/Uptick/uptick-cluster/ && ~/.config/scripts/aws-sso-login.sh"
 alias clusterpull="cd ~/projects/Uptick/uptick-cluster/ && git pull"
+alias yodawgstartthefrontend="FRONTEND_SERVER_SKIP_BACKEND_CHECK=1 pnpm start"
 
 # University Aliases
 alias rocketpy="cd ~/projects/University/rocketpy-sims/"
@@ -41,4 +43,5 @@ alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
 # Meme Aliases
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 alias {pog,poggers}='echo "⣿⣿⣿⣿⡿⠟⠛⠛⠛⠛⠉⠉⠙⠛⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠟\n⣿⣿⣯⣥⣤⣶⣶⣶⣶⣿⣿⣿⣿⣿⣿⣷⣾⣿⣿⣿⣿⣿⣿⣿⣏⣀⣀⣀⡀\n⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠻⠿⠟⠉⠉⠉⢻⣿⣿⣿⡿⠟⠋⣡⣼⣿⣿⣿⡄\n⣿⣿⣿⣟⣭⣤⣶⣶⣿⣿⠃⠀⠀⢀⣀⣤⣶⣿⣿⣿⣿⡅⡀⢀⣩⣤⣤\n⣿⣿⣿⣿⣿⣿⣛⡛⠛⠛⠛⢋⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⠛⠛⠓⠠\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣤⣤⣤⣦\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠿⠿⢿⡿⢿⣿⣿⣿⠃\n⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣥⣄⣀⣀⠀⠀⠀⠀⠀⢰⣾⣿⣿⠏\n⠀⠀⠀⠀⠀⠀⠉⣩⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣜⡻⠋\n⣰⣾⣷⣶⣿⣾⣖⣻⣿⣿⡿⣿⣿⣿⣿⠿⠿⠟⠛⠛⠛⠋⠉⠉⢉⡽⠃\n⣿⣿⣿⣿⣿⣿⡉⠉⠉⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⡤⠚⠉\n⠛⠛⣿⣿⣿⣿⣿⣿⣿⠉⠛⢶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⡇\n⠠⣾⣿⣿⣿⣿⣿⠿⠟⠃⠀⠀⠀⠈⠲⣴⣦⣤⣤⣤⣶⡾⠁\n⠄⠈⠉⠻⢿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠛⠉"'

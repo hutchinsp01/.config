@@ -8,5 +8,7 @@
 !skhd/
 !yabai/
 !zsh/
-zsh/.zsh_history
+
+# Reignore
+zsh/.zsh_history*
 zsh/.zcompdump*
