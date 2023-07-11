@@ -4,6 +4,7 @@
 
 # Except ...
 !.gitignore
+!.macos
 !kitty/
 !skhd/
 !yabai/

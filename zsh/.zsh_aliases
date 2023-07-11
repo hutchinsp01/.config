@@ -26,8 +26,8 @@ alias dev="git checkout develop"
 alias wf="cd ~/projects/Uptick/workforce/ && poetry shell"
 alias subman="cd ~/projects/Uptick/subscription-manager/"
 alias chepong="cd ~/projects/Uptick/chepong"
-alias cluster="cd ~/projects/Uptick/uptick-cluster/ && ~/.config/scripts/aws-sso-login.sh"
-alias clusterpull="cd ~/projects/Uptick/uptick-cluster/ && git pull"
+alias justcluster="cd ~/Projects/Uptick/uptick-cluster"
+alias cluster="cd ~/projects/Uptick/uptick-cluster/ && git pull && poetry shell && ~/.config/scripts/aws-sso-login.sh"
 alias yodawgstartthefrontend="FRONTEND_SERVER_SKIP_BACKEND_CHECK=1 pnpm start"
 
 # University Aliases
