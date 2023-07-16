@@ -1,3 +1,6 @@
+# Open terminal
+# cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+
 # Changing Window Focus
 
 # Change window focus within space
@@ -67,5 +70,8 @@ ctrl + cmd - k : yabai -m window south --resize top:0:-20 2> /dev/null || yabai 
 ctrl + cmd - l : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
 
 
+# Scripts
 
+# Modify opacity
+alt - o : ~/.config/yabai/scripts/toggle-opacity.sh 
 
