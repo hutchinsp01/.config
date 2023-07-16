@@ -13,9 +13,9 @@ gaps["left"]="8"
 gaps["right"]="8"
 gaps["inner"]="8"
 
-color["focused"]="0xFF000000"
-color["normal"]="0xFF000000"
-color["preselect"]="0xff000000"
+color["active"]="0x00000000"
+color["normal"]="0x00000000"
+color["preselect"]="0x00000000"
 
 # ===== Loading Scripting Additions ============
 
@@ -41,17 +41,21 @@ yabai -m config window_topmost              off
 yabai -m config window_shadow               float
 yabai -m window_placement                   second_child
 
-yabai -m config window_border               off
-yabai -m config window_border_width         "8"
-yabai -m config window_border_radius        "0"
-yabai -m config active_window_border_color  "${color["focused"]}"
-yabai -m config normal_window_border_color  "${color["normal"]}"
-yabai -m config insert_feedback_color       "${color["preselect"]}"
+yabai -m window_animation_duration          1
+yabai -m window_opacity_duration            1
+
+yabai -m config window_border               on
+yabai -m config window_border_radius        8
+yabai -m config window_border_width         2
+yabai -m config window_border_blur          on
+yabai -m config window_border_hidpi         on
+yabai -m config active_window_border_color  0x01000000
+yabai -m config normal_window_border_color  0x01000000
+yabai -m config insert_feedback_color       0x01000000
 
 yabai -m config window_opacity              on
-yabai -m config active_window_opacity       1.0
-yabai -m config normal_window_opacity       0.95
-yabai -m window_opacity_duration            0.0
+yabai -m config active_window_opacity       0.98
+yabai -m config normal_window_opacity       0.90
 yabai -m config split_ratio                 0.50
 
 yabai -m config auto_balance                off
@@ -72,6 +76,7 @@ yabai -m rule --add label="Software Update" title="Software Update" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 yabai -m rule --add label="1Password 7" app="^1Password 7$" manage=off
 yabai -m rule --add label="Docker Desktop" app="^Docker Desktop$" manage=off
+yabai -m rule --add label="Sonos" app="^Sonos$" manage=off
 # ===============================================
 
 set +x
