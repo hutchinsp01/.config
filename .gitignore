@@ -12,4 +12,6 @@
 
 # Reignore
 zsh/.zsh_history*
+zsh/.zsh_sessions*
 zsh/.zcompdump*
+zsh/.p10k.zsh

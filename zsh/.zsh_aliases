@@ -17,6 +17,9 @@ alias chrome="open -a 'Google Chrome'"
 # Kube Aliases
 alias kgp="kubectl get pods"
 
+# Yabai Aliases
+alias toggleopacity="$CONFIG/yabai/scripts/toggle-opacity.sh"
+
 # Uptick Aliases
 alias ps="poetry shell"
 alias pw="pnpm watch"
@@ -34,13 +37,18 @@ alias yodawgstartthefrontend="FRONTEND_SERVER_SKIP_BACKEND_CHECK=1 pnpm start"
 alias rocketpy="cd ~/projects/University/rocketpy-sims/"
 alias rs="cd ~/projects/University/recipestore"
 alias astra="cd ~/projects/University/astra"
+alias fintech="cd ~/Projects/University/FNCE30012/"
 
 # Other Aliases
-alias aoc="cd $PROJECT_HOME/advent-of-code"
+alias aoc="cd $PROJECT_HOME/personal/aoc2023"
+alias rungolf="cat D | make run DAY=04golf"
 
 # Cleaning Aliases
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
+# Storage Aliases
+alias masterDB="~/../../Volumes/MasterDBPH/"
+alias kobo="~/../../Volumes/KOBOeReader/"
 # Meme Aliases
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'

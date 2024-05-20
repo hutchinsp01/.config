@@ -32,6 +32,6 @@ killall Dock
 ############################################################
 
 # Key repeat and InitialKeyRepeatSpeed
-defaults write -g KeyRepeat -float 3.0
-defaults write NSGlobalDomain KeyRepeat -float 3.0
+defaults write -g KeyRepeat -float 2.0
+defaults write NSGlobalDomain KeyRepeat -float 2.0
 

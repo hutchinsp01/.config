@@ -22,16 +22,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export EDITOR="nvim"
 
 export PROJECT_HOME=~/projects
 export UPTICK=$PROJECT_HOME/Uptick
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CONFIG="$HOME/.config"
-# export PATH="/usr/local/sbin:$PATH"
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 export GITOPS_APPS_DIRECTORY=$UPTICK/uptick-cluster/apps
 
 
@@ -40,12 +37,12 @@ plugin=(
  git
 )
 
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
-#export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-# source ~/.nvm/nvm.sh
-
 source $CONFIG/zsh/.zsh_aliases
-eval "$(rtx activate --status zsh)"
+
+eval "$(mise activate --status zsh)"
+
+# Git commands
+source $CONFIG/bash/fzf-git/fzf_git_commits.sh
+source $CONFIG/bash/fzf-git/fzf_git_branches.sh
+source $CONFIG/bash/fzf-git/fzf_git_files.sh
+
