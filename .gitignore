@@ -4,11 +4,12 @@
 
 # Except ...
 !.gitignore
-!.macos
+!bootstrap/
 !kitty/
 !skhd/
 !yabai/
 !zsh/
+!sketchybar/
 
 # Reignore
 zsh/.zsh_history*
