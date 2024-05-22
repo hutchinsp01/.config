@@ -11,6 +11,7 @@
 !zsh/
 !sketchybar/
 !bash/
+!nvim/
 
 # Reignore
 zsh/.zsh_history*
