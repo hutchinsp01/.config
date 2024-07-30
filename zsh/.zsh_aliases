@@ -6,13 +6,17 @@ alias yabairestart="brew services restart yabai"
 alias skhdconfig="nvim ~/.config/skhd/skhdrc"
 alias skhdrestart="brew services restart skhd"
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
-alias spt-start="brew services restart spotifyd && spt"
+alias nvimconfig="nvim $CONFIG/nvim"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias myip="curl https://ipecho.net/plain; echo"
-alias ls="ls --color -l -h -a"
+alias ls="ls --color -g -h -A"
 alias scratch="code $PROJECT_HOME/scratch.py"
 alias runscratch="python3 $PROJECT_HOME/scratch.py"
 alias chrome="open -a 'Google Chrome'"
+
+# Git Aliases
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
 
 # Kube Aliases
 alias kgp="kubectl get pods"
@@ -25,23 +29,15 @@ alias ps="poetry shell"
 alias pw="pnpm watch"
 alias yyw="yarn && yarn watch"
 alias yw="yarn watch"
-alias dev="git checkout develop"
-alias wf="cd ~/projects/Uptick/workforce/ && poetry shell"
-alias subman="cd ~/projects/Uptick/subscription-manager/"
-alias chepong="cd ~/projects/Uptick/chepong"
-alias justcluster="cd ~/Projects/Uptick/uptick-cluster"
-alias cluster="cd ~/projects/Uptick/uptick-cluster/ && git pull && poetry shell && ~/.config/scripts/aws-sso-login.sh"
-alias yodawgstartthefrontend="FRONTEND_SERVER_SKIP_BACKEND_CHECK=1 pnpm start"
+alias wf="cd $UPTICK/workforce/ && poetry shell"
+alias subman="cd $UPTICK/subscription-manager/"
+alias chepong="cd $UPTICK/chepong"
+alias cluster="cd $UPTICK/uptick-cluster/ && git pull && poetry shell"
+alias asl="aws sso login"
 
-# University Aliases
-alias rocketpy="cd ~/projects/University/rocketpy-sims/"
-alias rs="cd ~/projects/University/recipestore"
-alias astra="cd ~/projects/University/astra"
-alias fintech="cd ~/Projects/University/FNCE30012/"
-
-# Other Aliases
-alias aoc="cd $PROJECT_HOME/personal/aoc2023"
-alias rungolf="cat D | make run DAY=04golf"
+# Virtualenv Aliases
+alias venv="bash $CONFIG/scripts/setup-venv.sh"
+alias delvenv="rm -rf .venv/"
 
 # Cleaning Aliases
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
@@ -49,6 +45,7 @@ alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 # Storage Aliases
 alias masterDB="~/../../Volumes/MasterDBPH/"
 alias kobo="~/../../Volumes/KOBOeReader/"
+
 # Meme Aliases
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'

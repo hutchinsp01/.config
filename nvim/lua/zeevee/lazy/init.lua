@@ -1,16 +1,17 @@
 return {
 	{
-		"nvim-lua/plenary.nvim",
-		name = "plenary"
-	},	
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate"	
-	},
+        "nvim-lua/plenary.nvim",
+        name = "plenary"
+    },
+    {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build =
+        'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+    },
 	"mbbill/undotree",
 	"tpope/vim-fugitive",
 	"folke/zen-mode.nvim",
 	"github/copilot.vim",
-	"eandrju/cellular-automaton.nvim", -- Stupid animation
+	"kyazdani42/nvim-tree.lua",
+	"folke/which-key.nvim",
 }
-

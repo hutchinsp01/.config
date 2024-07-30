@@ -43,3 +43,8 @@ brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 brew install sketchybar
 
+# Nvim formulas
+brew install ripgrep
+brew install fd
+brew install make
+brew install gcc

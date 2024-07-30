@@ -1,48 +1,47 @@
-# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/hutchinsp01/.oh-my-zsh"
+plugins=(
+ git
+ git-extras
+ kubectl
+ kubectx
+ brew
+ python
+ pyenv
+ direnv
+ terraform
+ aws
+ node
+ docker
+ docker-compose
+ mise
+ zsh-autosuggestions
+)
+
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-export EDITOR="nvim"
-
-export PROJECT_HOME=~/projects
-export UPTICK=$PROJECT_HOME/Uptick
-
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export H=$HOME
+export PROJECT_HOME=$HOME/dev
+export UPTICK=$HOME/dev
 export CONFIG="$HOME/.config"
 export GITOPS_APPS_DIRECTORY=$UPTICK/uptick-cluster/apps
+export EDITOR="nvim"
+export STARSHIP_CONFIG="$CONFIG/starship/config.toml"
 
-
-plugin=(
- pyenv
- git
-)
-
+source $ZSH/oh-my-zsh.sh
 source $CONFIG/zsh/.zsh_aliases
 
-eval "$(mise activate --status zsh)"
-
-# Git commands
 source $CONFIG/bash/fzf-git/fzf_git_commits.sh
 source $CONFIG/bash/fzf-git/fzf_git_branches.sh
 source $CONFIG/bash/fzf-git/fzf_git_files.sh
+
+eval "$(mise activate --status zsh)"
+eval "$(starship init zsh)" 
 
