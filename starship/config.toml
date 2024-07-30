@@ -1,0 +1,23 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[python]
+format = 'via [(\($virtualenv\) )]($style)'
+
+[bun]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[aws]
+disabled = true
+
+[kubernetes]
+disabled = true
