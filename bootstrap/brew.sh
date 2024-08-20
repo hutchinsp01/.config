@@ -19,6 +19,7 @@ install_brew
 
 # Install applications
 brew install --cask --appdir="/Applications" google-chrome
+brew install --cask --appdir="/Applications" kitty
 brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" visual-studio-code
 brew install --cask --appdir="/Applications" iterm2
@@ -29,7 +30,7 @@ brew install --cask --appdir="/Applications" 1password
 
 # Install fonts
 brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
+brew install --cask font-hack-nerd-font
 
 # Install Taps
 brew tap FelixKratz/formulae
@@ -48,3 +49,4 @@ brew install ripgrep
 brew install fd
 brew install make
 brew install gcc
+brew install cmake
