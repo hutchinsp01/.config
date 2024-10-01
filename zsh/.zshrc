@@ -1,6 +1,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 plugins=(
  git
@@ -43,5 +44,5 @@ source $CONFIG/bash/fzf-git/fzf_git_branches.sh
 source $CONFIG/bash/fzf-git/fzf_git_files.sh
 
 eval "$(mise activate --status zsh)"
-eval "$(starship init zsh)" 
+eval "$(starship init zsh)"
 

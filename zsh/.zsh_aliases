@@ -13,6 +13,7 @@ alias ls="ls --color -g -h -A"
 alias scratch="code $PROJECT_HOME/scratch.py"
 alias runscratch="python3 $PROJECT_HOME/scratch.py"
 alias chrome="open -a 'Google Chrome'"
+alias vim="nvim"
 
 # Git Aliases
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign -m "--wip-- [skip ci]"'
