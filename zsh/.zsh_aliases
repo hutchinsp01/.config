@@ -26,14 +26,11 @@ alias kgp="kubectl get pods"
 alias toggleopacity="$CONFIG/yabai/scripts/toggle-opacity.sh"
 
 # Uptick Aliases
-alias ps="poetry shell"
-alias pw="pnpm watch"
-alias yyw="yarn && yarn watch"
-alias yw="yarn watch"
-alias wf="cd $UPTICK/workforce/ && poetry shell"
+alias wf="cd $UPTICK/workforce/"
 alias subman="cd $UPTICK/subscription-manager/"
 alias chepong="cd $UPTICK/chepong"
 alias cluster="cd $UPTICK/uptick-cluster/ && git pull && poetry shell"
+alias dw="cd $UPTICK/datawarehouse"
 alias asl="aws sso login"
 
 # Virtualenv Aliases
