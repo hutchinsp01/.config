@@ -19,6 +19,7 @@ plugins=(
  docker-compose
  mise
  zsh-autosuggestions
+ vi-mode
 )
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -42,6 +43,22 @@ source $CONFIG/zsh/.zsh_aliases
 source $CONFIG/bash/fzf-git/fzf_git_commits.sh
 source $CONFIG/bash/fzf-git/fzf_git_branches.sh
 source $CONFIG/bash/fzf-git/fzf_git_files.sh
+
+# History
+setopt append_history        # Append to history, rather than overwriting
+setopt inc_append_history    # Append immediately rather than only at exit
+setopt extended_history      # Store some metadata as well
+setopt hist_no_store         # Don't store history and fc commands
+setopt no_bang_hist          # Don't use ! for history expansion
+setopt hist_ignore_dups      # Don't add to history if it's the same as previous event.
+setopt hist_ignore_all_dups  # Remove older event if new event is duplicate.
+setopt hist_save_no_dups     # Older commands that duplicate newer ones are omitted.
+HISTSIZE=11000               # Max. entries to keep in memory
+SAVEHIST=10000               # Max. entries to save to file
+
+# VI Mode
+INSERT_MODE_INDICATOR="%F{yellow}+%f"
+bindkey -M viins 'jj' vi-cmd-mode
 
 eval "$(mise activate --status zsh)"
 eval "$(starship init zsh)"
