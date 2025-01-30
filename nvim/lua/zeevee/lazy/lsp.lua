@@ -36,6 +36,7 @@ return {
                 "biome",
                 "ts_ls",
                 "rust_analyzer",
+                "emmet_ls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)

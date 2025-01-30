@@ -33,6 +33,7 @@ alias chepong="cd $UPTICK/chepong"
 alias cluster="cd $UPTICK/uptick-cluster/ && git pull && poetry shell"
 alias dw="cd $UPTICK/datawarehouse"
 alias asl="aws sso login"
+alias refreshxero="tkf mcommand -a subscription-manager 'sync_xero_to_warehouse --consolidated-profit-loss --consolidated-profit-loss-months=60'"
 
 # Virtualenv Aliases
 alias venv="bash $CONFIG/scripts/setup-venv.sh"
