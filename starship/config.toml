@@ -3,6 +3,11 @@
 
 add_newline = false
 
+[time]
+disabled = false
+format = '[$time ]($style)'
+time_format = '%H:%M'
+
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
@@ -17,7 +22,7 @@ disabled = true
 disabled = true
 
 [aws]
-disabled = true
+format = 'on [$symbol($profile )(\[$duration\] )]($style)'
 
 [kubernetes]
-disabled = true
+disabled = false

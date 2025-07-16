@@ -13,7 +13,6 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
         "onsails/lspkind.nvim",
-        "VonHeikemen/lsp-zero.nvim",
     },
 
     config = function()

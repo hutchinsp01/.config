@@ -13,6 +13,9 @@ alias ls="ls --color -g -h -A"
 alias scratch="code $PROJECT_HOME/scratch.py"
 alias runscratch="python3 $PROJECT_HOME/scratch.py"
 alias chrome="open -a 'Google Chrome'"
+alias bom="$ZSH_SCRIPTS/open-chrome-tab-if-not-exists.sh http://www.bom.gov.au/products/IDR024.loop.shtml"
+alias gemini="$ZSH_SCRIPTS/open-chrome-tab-if-not-exists.sh https://gemini.google.com/app"
+alias dbreset="$ZSH_SCRIPTS/dbreset.sh"
 alias vim="nvim"
 
 # Git Aliases
@@ -34,6 +37,9 @@ alias cluster="cd $UPTICK/uptick-cluster/ && git pull && poetry shell"
 alias dw="cd $UPTICK/datawarehouse"
 alias asl="aws sso login"
 alias refreshxero="tkf mcommand -a subscription-manager 'sync_xero_to_warehouse --consolidated-profit-loss --consolidated-profit-loss-months=60'"
+alias mr="mise run"
+alias wfd="brew services stop postgresql && brew services stop redis"
+alias wfup="brew services start postgresql && brew services start redis"
 
 # Virtualenv Aliases
 alias venv="bash $CONFIG/scripts/setup-venv.sh"

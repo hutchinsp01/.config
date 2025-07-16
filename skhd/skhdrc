@@ -60,15 +60,11 @@ shift + alt - 5 : yabai -m window --space 5
 ctrl - left  : yabai -m space --focus prev;
 ctrl - right : yabai -m space --focus next;
 
-# Move focus to app
-# alt - 1 : pgrep -x "Google Chrome" && open -a "Google Chrome"
-# alt - 2 : pgrep -x "kitty" && open -a "kitty"
-# alt - 3 : pgrep -x "Visual Studio Code" && open -a "/Applications/Visual Studio Code.app"
-# alt - 4 : pgrep -x "Slack" && open -a "Slack"
-alt - 1 : open -a "/Applications/Google Chrome.app"
-alt - 2 : open -a "/Applications/kitty.app"
-alt - 3 : open -a "/Applications/Visual Studio Code.app"
-alt - 4 : open -a "/Applications/Slack.app"
+# Move focus to app (only if already running)
+alt - 1 : pgrep -x "Google Chrome" > /dev/null && open -a "/Applications/Google Chrome.app"
+alt - 2 : pgrep -x "kitty" > /dev/null && open -a "/Applications/kitty.app"
+alt - 3 : pgrep -x "Slack" > /dev/null && open -a "/Applications/Slack.app"
+alt - 4 : pgrep -x "Visual Studio Code" > /dev/null && open -a "/Applications/Visual Studio Code.app"
 
 # Move focus to space
 shift + ctrl - 1 : yabai -m space --focus 1
